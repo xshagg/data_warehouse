@@ -16,7 +16,6 @@ try:
     if myClusterProps['ClusterStatus'].lower() == 'available':
         print("Endpoint: ", myClusterProps['Endpoint']['Address'])
         print("ARN: ", myClusterProps['IamRoles'][0]['IamRoleArn'])
-        print(myClusterProps)
 except redshift.exceptions.ClusterNotFoundFault as e:
     print('Cluster not found')
     exit()
